@@ -1,0 +1,17 @@
+{
+	"name": "LS_AzureSQL_DW",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sql-server-apple-001x.database.windows.net",
+			"database": "dw_apple_prod",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "gadiel",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDYyM0VBRUM1LTg5RjAtNDlCNS05QzZFLUVGRTU2NUEyQjdDOF80ODQzNTk3MC0xMDY1LTQwNjctODY0My05OGVjMGFkMGZkNGEiDQp9"
+		}
+	}
+}
