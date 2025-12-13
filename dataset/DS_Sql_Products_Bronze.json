@@ -1,0 +1,50 @@
+{
+	"name": "DS_Sql_Products_Bronze",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureSQL_DW",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bronze"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "product_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "product_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "category_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "launch_date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "price",
+				"type": "nvarchar"
+			},
+			{
+				"name": "notes",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ingestion_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "products"
+		}
+	}
+}

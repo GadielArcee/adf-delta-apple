@@ -1,0 +1,38 @@
+{
+	"name": "DS_Sql_Category_Bronze",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureSQL_DW",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bronze"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "category_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "category_name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "extra_note",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ingestion_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "category"
+		}
+	}
+}

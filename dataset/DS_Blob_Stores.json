@@ -1,0 +1,47 @@
+{
+	"name": "DS_Blob_Stores",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BlobStorage_Raw",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bronze"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "stores.csv",
+				"container": "raw-apple-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": ""
+		},
+		"schema": [
+			{
+				"name": "Store_ID",
+				"type": "String"
+			},
+			{
+				"name": "Store_Name",
+				"type": "String"
+			},
+			{
+				"name": "City",
+				"type": "String"
+			},
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "opened",
+				"type": "String"
+			}
+		]
+	}
+}

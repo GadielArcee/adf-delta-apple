@@ -1,0 +1,46 @@
+{
+	"name": "DS_Sql_Sales_Bronze",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureSQL_DW",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bronze"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "sale_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "sale_date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "store_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "product_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "quantity",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ingestion_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "sales"
+		}
+	}
+}

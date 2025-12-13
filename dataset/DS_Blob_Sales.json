@@ -1,0 +1,47 @@
+{
+	"name": "DS_Blob_Sales",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BlobStorage_Raw",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bronze"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "sales.csv",
+				"container": "raw-apple-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "sale_id",
+				"type": "String"
+			},
+			{
+				"name": "sale_date",
+				"type": "String"
+			},
+			{
+				"name": "store_id",
+				"type": "String"
+			},
+			{
+				"name": "product_id",
+				"type": "String"
+			},
+			{
+				"name": "quantity",
+				"type": "String"
+			}
+		]
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"name": "DS_Sql_Warranty_Bronze",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureSQL_DW",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bronze"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "claim_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "claim_date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "sale_id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "repair_status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ingestion_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "bronze",
+			"table": "warranty"
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"name": "DS_Blob_Warranty",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BlobStorage_Raw",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bronze"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "warranty.csv",
+				"container": "raw-apple-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "claim_id",
+				"type": "String"
+			},
+			{
+				"name": "claim_date",
+				"type": "String"
+			},
+			{
+				"name": "sale_id",
+				"type": "String"
+			},
+			{
+				"name": "repair_status",
+				"type": "String"
+			}
+		]
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"name": "DS_Blob_Category",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BlobStorage_Raw",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Bronze"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "category.csv",
+				"container": "raw-apple-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "category_id",
+				"type": "String"
+			},
+			{
+				"name": "category_name",
+				"type": "String"
+			},
+			{
+				"name": "extra_note",
+				"type": "String"
+			}
+		]
+	}
+}
